@@ -25,8 +25,8 @@ body {
 }
 
 .navbar-nav > li > a:hover {
-    background-color: black !important;
-    border-bottom: solid 5px red;
+    background-color: orangered !important;
+    border-bottom: solid 8px #0067b2;
     
     transition: background .5s ease-in-out;
     -moz-transition: background .5s ease-in-out;
@@ -41,11 +41,27 @@ a.navbar-brand {
     font-size: 20px;
 }
 
-.songs h1 {
-    font-size: 2em;
+.btn {
+    border-radius: 0;
 }
 
+.btn:hover {
+    transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+}
+
+/* Main Styles */
+
+.songs h1 {
+    font-size: 2em;
+    margin: 2px 0 10px 0
+}
+
+
+
 div.song {
+    padding: 10px;
     height: 250px;
     background-color: #ebebeb;
 }
