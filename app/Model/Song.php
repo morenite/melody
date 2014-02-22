@@ -4,7 +4,7 @@ class Song extends AppModel {
 
 	public $primaryKey = "id_song";
 
-	public $hasMany = array("EventSong", "Video", "SongKeySignature", "MidiFile", "MusicalSheet");
+	public $hasMany = array("EventSong", "Video", "MidiFile", "MusicalSheet");
 	public $belongsTo = array("SongCategory");
 
 }

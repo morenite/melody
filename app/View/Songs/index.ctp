@@ -23,8 +23,8 @@
                                     <p align="center" class="no-margin no-padding"><span class="glyphicon glyphicon-music"></span></p>
                                 </div>
                                 <span class="label label-warning"><?php echo $song['SongCategory']['name'] ?></span>
-                                <h1><a href="#"><?php echo $song['Song']['title'] ?></a></h1>
-                                <p class="no-margin no-padding">Acapela, SSATB</p>
+                                <h1><?php echo $song['Song']['title'] ?></h1>
+                                <p class="no-margin no-padding"><?php echo $song['Song']['subtitle'] ?></p>
                             </div>
                         </div>
                     </div>    
@@ -43,6 +43,7 @@
                         <p class="no-margin no-padding"><?php echo $song['Song']['arranger'] ?></p>
                     </div>
                 </div>
+                <a href="<?php echo Router::url(array('controller' => 'songs', 'action' => 'detail', $song['Song']['id_song'])) ?>" class="btn btn-success btn-block" style="margin-bottom: 30px;"><span class="glyphicon glyphicon-info-sign"></span> More Information</a>
             </div>
          <?php endforeach; ?>
         

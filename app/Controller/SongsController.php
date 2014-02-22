@@ -41,6 +41,25 @@ class SongsController extends AppController {
 	public function edit($songId) {
 
 	}
+    
+    public function detail($id) {
+        $song = $this->Song->findByid_song($id);
+        
+        $this->loadModel('SongKeySignature');
+        
+        $this->SongKeySignature->recursive = 0;
+        $keys = $this->SongKeySignature->find('all', array(
+            'conditions' => array(
+                'song_id' => $id
+            )
+        ));
+        
+        $song['keys'] = $keys;
+        
+        $this->set('song', $song);
+        
+        $this->set('title_for_layout', '"' . $song['Song']['title'] . "\" Song Detail");
+    }
 
 	public function delete($songId) {
 

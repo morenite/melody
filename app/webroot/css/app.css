@@ -9,6 +9,7 @@ body {
     background-color: #0067b2;
     border-radius: 0;
     border: none;
+    margin-bottom: 0;
 }
 
 .navbar-nav > li > a {
@@ -66,7 +67,6 @@ div.song {
 
 div.song-box {
     border: solid 1px #ebebeb;
-    margin-bottom: 30px;
     min-height: 350px;
 }
 
@@ -92,6 +92,26 @@ p.song-detail-header {
     padding: 0;
     border-bottom: solid 1px #ebebeb;
     font-weight: 700;
+}
+
+h4.song-detail-header {
+    margin: 5px 0 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: solid 1px #ebebeb;
+}
+
+h1.song-title {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+
+div.file-item {
+    margin: 15px 0 0 0;
+    display: block;
+    width: 100%;
+    clear: both;
 }
 
 /* Miscellaneous */
