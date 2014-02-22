@@ -1,32 +1,47 @@
 <div class="row">
 
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Song Index</h1>
+        </div>
+    </div>
+    
     <?php /* ?>
     <pre>
         <?php print_r($songs);?>
     </pre>
-    <?php */?>
+    <?php */ ?>
 
-    <div class="col-md-12 songs">
-        
+    <div class="col-md-12 songs">        
         <?php foreach ($songs as $song): ?>
             <div class="col-md-4">
-                <div class="song">
-                    <div class="row">
-                        <div class="col-md-2 no-padding" style="background-color: black; height: 85px;">
-                            <p align="center" class="no-margin no-padding" style="font-size: 50px; height: 85px; line-height: 85px; color: white;"><span class="glyphicon glyphicon-music"></span></p>
+                <div class="song-box">
+                    <div class="song">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="song-icon">
+                                    <p align="center" class="no-margin no-padding"><span class="glyphicon glyphicon-music"></span></p>
+                                </div>
+                                <span class="label label-warning"><?php echo $song['SongCategory']['name'] ?></span>
+                                <h1><a href="#"><?php echo $song['Song']['title'] ?></a></h1>
+                                <p class="no-margin no-padding">Acapela, SSATB</p>
+                            </div>
                         </div>
-                        <div class="col-md-10">
-                            <span class="label label-success"><?php echo $song['SongCategory']['name'] ?></span>
-                            <h1><?php echo $song['Song']['title'] ?></h1>
-                        </div>
+                    </div>    
+                    <div style="padding: 10px 10px 0 10px;">
+                        <p class="song-detail-header">Key Signature</p>
+                        <?php foreach ($song['keys'] as $key): ?>
+                        <span class="label label-default"><?php echo $key['KeySignature']['name'] ?></span>
+                        <?php endforeach; ?>
+                        
+                        <p class="no-margin no-padding">&nbsp;</p>
+                        <p class="song-detail-header">Composer</p>
+                        <p class="no-margin no-padding"><?php echo $song['Song']['composer'] ?></p>
+                        
+                        <p class="no-margin no-padding">&nbsp;</p>
+                        <p class="song-detail-header">Arranger</p>
+                        <p class="no-margin no-padding"><?php echo $song['Song']['arranger'] ?></p>
                     </div>
-
-                    <p class="no-margin no-padding">Composed by <strong><?php echo $song['Song']['composer'] ?></strong></p>
-                    <p>Arranged by <strong><?php echo $song['Song']['arranger'] ?></strong></p>
-
-                    <p align="right">
-                        <a hre="#" class="btn btn-info"><span class="glyphicon glyphicon-info-sign"></span> Details</a>
-                    </p>
                 </div>
             </div>
          <?php endforeach; ?>

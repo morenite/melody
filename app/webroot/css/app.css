@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', arial;
+    font-family: 'Lato', arial;
 }
 
 /* Overridden Bootstrap Styles */
@@ -17,7 +17,7 @@ body {
     padding: 0 20px 0 20px;
     display: block;
     font-weight: 300;
-    font-size: 17px;
+    font-size: 15px;
     
     transition: background .5s ease-in-out;
     -moz-transition: background .5s ease-in-out;
@@ -55,16 +55,43 @@ a.navbar-brand {
 
 .songs h1 {
     font-size: 2em;
-    margin: 2px 0 10px 0
+    margin: 2px 0 2px 0;
 }
-
-
 
 div.song {
     padding: 10px;
-    height: 250px;
-    background-color: #ebebeb;
+    height: 125px;
+    background-color: #f9f9f9;
+}
+
+div.song-box {
+    border: solid 1px #ebebeb;
     margin-bottom: 30px;
+    min-height: 350px;
+}
+
+div.song-icon {
+    background-color: #0067b2;
+    height: 85px;
+    width: 60px;
+    float: left;
+    display: block;
+    margin: 0 10px 0 -30px;
+    border-bottom: solid 10px #69be63;
+}
+
+div.song-icon p {
+    font-size: 40px; 
+    height: 85px; 
+    line-height: 85px; 
+    color: white;
+}
+
+p.song-detail-header {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    border-bottom: solid 1px #ebebeb;
+    font-weight: 700;
 }
 
 /* Miscellaneous */

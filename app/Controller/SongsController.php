@@ -10,10 +10,26 @@ class SongsController extends AppController {
 	);
 
 	public function index() {
-		$this->set('title_for_layout', 'Indeks Lagu');
+		$this->set('title_for_layout', 'Song Index');
 
+        $this->Song->recursive = 0;
+        
 		$this->Paginator->settings = $this->paginate;
 		$songs = $this->Paginator->paginate('Song');
+        
+        $this->loadModel('SongKeySignature');
+        
+        for ($i = 0; $i < count($songs); $i++) {
+            $this->SongKeySignature->recursive = 0;
+            $keys = $this->SongKeySignature->find('all', array(
+                'conditions' => array(
+                    'song_id' => $songs[$i]['Song']['id_song']
+                )
+            ));
+            
+            $songs[$i]['keys'] = $keys;
+        }
+        
 		$this->set('songs', $songs);
 	}
 

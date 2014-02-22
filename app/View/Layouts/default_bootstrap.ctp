@@ -3,7 +3,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $title_for_layout; ?>
+		<?php echo $title_for_layout; ?> - Melody
 	</title>
 	<?php
         /* CSSes */
@@ -11,7 +11,7 @@
         echo $this->Html->css('app');
         
         /* Google Fonts */
-        echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800');
+        echo $this->Html->css('http://fonts.googleapis.com/css?family=Lato:400,700,900');
 	?>
 </head>
 <body>
@@ -20,6 +20,8 @@
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
     </div>
+    <?php echo $this->Element('footer') ?>
+        
 	<?php // echo $this->element('sql_dump'); ?>
     
     <?php 
