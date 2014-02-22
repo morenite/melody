@@ -26,7 +26,9 @@
                 
                 <h4 class="song-detail-header">Key Signature</h4>
                 <?php foreach ($song['keys'] as $key): ?>
-                <span class="label label-default"><?php echo $key['KeySignature']['name'] ?></span>
+                <?php echo $this->Html->image('key_signatures/' . $key['KeySignature']['id_key_signature'] . '.png', array(
+                    'style' => 'width: 80px;', 'class' => 'img-thumbnail'
+                )); ?>
                 <?php endforeach; ?>
                 
                 <p class="no-margin no-padding">&nbsp;</p>
