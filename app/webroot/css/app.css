@@ -1,0 +1,77 @@
+body {
+    font-family: 'Open Sans', arial;
+}
+
+/* Overridden Bootstrap Styles */
+
+.navbar, .navbar-default {
+    height: 70px;
+    background-color: #0067b2;
+    border-radius: 0;
+    border: none;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+    line-height: 70px;
+    padding: 0 20px 0 20px;
+    display: block;
+    font-weight: 300;
+    font-size: 17px;
+    
+    transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: orangered !important;
+    border-bottom: solid 8px #0067b2;
+    
+    transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+}
+
+a.navbar-brand {
+    color: white !important;
+    padding: 0 15px 0 15px;
+    line-height: 70px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn:hover {
+    transition: background .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out;
+    -webkit-transition: background .5s ease-in-out;
+}
+
+/* Main Styles */
+
+.songs h1 {
+    font-size: 2em;
+    margin: 2px 0 10px 0
+}
+
+
+
+div.song {
+    padding: 10px;
+    height: 250px;
+    background-color: #ebebeb;
+}
+
+/* Miscellaneous */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
