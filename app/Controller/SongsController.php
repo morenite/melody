@@ -6,7 +6,7 @@ class SongsController extends AppController {
 	);
 
 	public $paginate = array(
-		'limit' => 2
+		'limit' => 6
 	);
 
 	public function index() {
