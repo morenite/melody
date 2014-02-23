@@ -22,6 +22,7 @@
             </ul>
             
             <ul class="nav navbar-nav pull-right">
+                <li><a href="<?php echo Router::url(array('controller' => 'administration')) ?>"><span class="glyphicon glyphicon-book"></span> Administration</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> username</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

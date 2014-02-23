@@ -12,6 +12,10 @@
         
         /* Google Fonts */
         echo $this->Html->css('http://fonts.googleapis.com/css?family=Lato:400,700,900');
+        
+        /* Scripts */
+        echo $this->Html->script('jquery-1.11.0.min');
+        echo $this->Html->script('bootstrap.min');
 	?>
 </head>
 <body>
@@ -26,6 +30,7 @@
     
     <?php 
         /* Scripts */
+        echo $this->fetch('script');
     ?>
 </body>
 </html>

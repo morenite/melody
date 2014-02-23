@@ -52,6 +52,14 @@ a.navbar-brand {
     -webkit-transition: background .5s ease-in-out;
 }
 
+.panel {
+    border-radius: 0 !important;
+}
+
+.panel-heading {
+    padding: 15px;
+}
+
 /* Main Styles */
 
 .songs h1 {
@@ -112,6 +120,41 @@ div.file-item {
     display: block;
     width: 100%;
     clear: both;
+}
+
+h4.menu-header {
+    padding: 10px;
+    border-bottom: solid 2px gray;
+    background-color: #FFD117;
+    color: white;
+}
+
+.menu-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+ul.administration-menu-items {
+    margin: 0;
+    padding: 0;
+}
+
+ul.administration-menu-items li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.administration-menu-items li a {
+    padding: 10px;
+    margin: 0 0 1px 0;
+    display: block;
+    width: 100%;
+    border: solid 1px #ebebeb;
+}
+
+ul.administration-menu-items li a:hover {
+    background-color: #f9f9f9;
 }
 
 /* Miscellaneous */
