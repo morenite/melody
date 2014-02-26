@@ -10,7 +10,7 @@
         <div id="rehearsal" class="panel-collapse collapse in">
             <div class="panel-body">
                 <ul class="administration-menu-items">
-                    <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Schedule New Rehearsal</a></li>
+                    <li><a class="ajax-button" href="<?php echo Router::url(array('controller' => 'rehearsals', 'action' => 'add')) ?>" target-element="div#content"><span class="glyphicon glyphicon-plus-sign"></span> Schedule New Rehearsal</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Rehearsal Data</a></li>
                 </ul>
             </div>

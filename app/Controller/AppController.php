@@ -33,6 +33,11 @@ class AppController extends Controller {
     public function beforeFilter() {
         parent::beforeFilter();
         
-        $this->layout = "default_bootstrap";
+        if ($this->request->is('ajax')) {
+            $this->layout = false;
+        }
+        else {
+            $this->layout = "default_bootstrap";
+        }        
     }
 }

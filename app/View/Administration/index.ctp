@@ -9,4 +9,11 @@
     <div class="col-md-3 menu-container">
         <?php echo $this->Element('administration_menu') ?>
     </div>
+    <div class="col-md-9">
+    	<p align="center" id="loading" style="display:none">
+    		Please wait while fetching content... <br/>
+    		<?php echo $this->Html->image('loading.gif') ?>
+    	</p>
+    	<div id="content" style="display:none"></div>
+    </div>
 </div>
