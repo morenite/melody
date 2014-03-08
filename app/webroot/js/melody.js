@@ -1,4 +1,4 @@
-function loadContent(sourceUrl, targetElement, historyObject) {
+function loadContent(sourceUrl, targetElement, callback) {
     $(targetElement).fadeOut("slow", function() {
 		$("#loading").fadeIn("slow", function() {
 			$(targetElement).load(sourceUrl, function(response, status, xhr) {
@@ -8,12 +8,16 @@ function loadContent(sourceUrl, targetElement, historyObject) {
                         $(targetElement).fadeIn("slow");
                     });
 				}
-				else {
+				else if (status === "success") {
 					$("#loading").fadeOut("slow", function () {
-                        historyObject.pushState(null, '', sourceUrl);
                         $(targetElement).fadeIn("slow");
+                        
+                        typeof callback === 'function' && callback;
                     });
 				}				
+                else {
+                    // TODO: Handle unknown result.
+                }
 			});
 		});	
 	});

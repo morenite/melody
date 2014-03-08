@@ -1,3 +1,4 @@
+<div class="data-holder" data-identifier="content-title"><?php echo $title_for_layout; ?></div>
 <div class="row">
 
     <div class="col-md-12">
