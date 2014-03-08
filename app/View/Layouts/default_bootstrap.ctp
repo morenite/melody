@@ -41,13 +41,13 @@
         $(document).ready(function() {
             var History = window.History;
 
-            History.Adapter.bind(window, "onpopstate", function() {
+            History.Adapter.bind(window, "statechange", function() {
                 var state = History.getState();
                 
                 loadContent(state.url, "div#content");
             });
             
-            $(".ajax-button").click(function() {
+            $(".ajax-button").click(function(event) {
                 event.preventDefault();
 
                 var targetElement = $(this).attr("target-element");
