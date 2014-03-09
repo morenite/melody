@@ -3,7 +3,7 @@
 
     <div class="col-md-12">
         <div class="page-header">
-            <h1>Song Index</h1>
+            <h1>Index of Song</h1>
         </div>
     </div>
     

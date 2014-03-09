@@ -9,7 +9,7 @@ body {
     background-color: #0067b2;
     border-radius: 0;
     border: none;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .navbar-nav > li > a {
@@ -122,6 +122,73 @@ div.file-item {
     clear: both;
 }
 
+div.event-box {
+    border: solid 1px #ebebeb;
+}
+
+div.event-box ul.event-song {
+    margin: 0;
+    padding: 0;
+}
+
+div.event-box ul.event-song li {
+    float: left;
+    list-style-type: none;
+}
+
+div.event-box ul.event-song li a {
+    color: white;
+    background-color: gray;
+    display: block;
+    margin: 0 3px 3px 0;
+    padding: 3px 10px 3px 10px;
+}
+
+div.event-box ul.participants {
+    margin: 0;
+    padding: 0;
+}
+
+div.event-box ul.participants li {
+    float: left;
+    list-style-type: none;
+}
+
+div.event {
+    padding: 10px;
+    height: 125px;
+    background-color: #f9f9f9;
+}
+
+div.event h1 {
+    font-size: 2.1em;
+}
+
+div.event-icon {
+    background-color: #0067b2;
+    height: 85px;
+    width: 60px;
+    float: left;
+    display: block;
+    margin: 0 10px 0 -30px;
+    border-bottom: solid 10px #69be63;
+}
+
+div.event-icon p {
+    font-size: 40px; 
+    height: 85px; 
+    line-height: 85px; 
+    color: white;
+    text-align: center;
+}
+
+p.event-detail-header {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    border-bottom: solid 1px #ebebeb;
+    font-weight: 700;
+}
+
 h4.menu-header {
     padding: 10px;
     border-bottom: solid 2px gray;
@@ -169,4 +236,13 @@ ul.administration-menu-items li a:hover {
 
 .data-holder {
     display: none;
+}
+
+.clear-fix {
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    display: block;
+    width: 100%;
+    clear: both;
 }

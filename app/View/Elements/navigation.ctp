@@ -17,8 +17,8 @@
                 <li><a href="<?php echo Router::url(array('controller' => 'users', 'action' => 'dashboard')) ?>"><span class="glyphicon glyphicon-home"></span> Dashboard</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-list"></span> My Activity</a></li>
                 <li><a href="<?php echo Router::url(array('controller' => 'songs', 'action' => 'index')) ?>"><span class="glyphicon glyphicon-music"></span> Song</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Event</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
+                <li><a href="<?php echo Router::url(array('controller' => 'events', 'action' => 'index')) ?>"><span class="glyphicon glyphicon-calendar"></span> Event</a></li>
+                <li><a href="<?php echo Router::url(array('controller' => 'messages', 'action' => 'index')) ?>"><span class="glyphicon glyphicon-envelope"></span> Message</a></li>
             </ul>
             
             <ul class="nav navbar-nav pull-right">

@@ -1,36 +1,47 @@
 <?php
 class EventsController extends AppController{
+    
+    public $components = array(
+		'Paginator'
+	);
+    
+    public $paginate = array(
+        'limit' => 10
+    );
+    
 	public function index() {
-            $this->Event->recursive = 2;
-            $events = $this->Event->find('all');
-            $this->set("events", $events);
-            
+        $this->Event->recursive = 2;
+        
+        $this->Paginator->settings = $this->paginate;
+        $events = $this->Paginator->paginate('Event');
+        
+        $this->set("events", $events);
 	}
 
 	public function add() {
-            
-            if ($this->request->is("post")) {
-                if($this->Event->save($this->request->data)) {
-                    $this->Session->setFlash("your events has been added succesfully", "flash_success");
-                    $this->redirect(array("controller" => "events", "action" => "index"));
-                }
-                else {
-                    $this->Session->setFlash("There is something wrong with your input data", "flash_dangerous");
-                }
+        if ($this->request->is("post")) {
+            if($this->Event->save($this->request->data)) {
+                $this->Session->setFlash("Your new events has been added succesfully.", "flash_success");
+                $this->redirect(array("controller" => "events", "action" => "index"));
             }
-            
-            $this->loadModel("EventType");
-            $this->set("eventTypes", $this->EventType->find("list"));
+            else {
+                $this->Session->setFlash("There is something wrong with your input data!", "flash_dangerous");
+            }
+        }
 
-            
+        $this->loadModel("EventType");
+        $this->set("eventTypes", $this->EventType->find("list"));
+	}
+
+	public function edit($id) {
 
 	}
 
-	public function edit($eventId) {
+	public function delete($id) {
 
 	}
-
-	public function delete($eventId) {
-
-	}
+    
+    public function detail($id) {
+        
+    }
 }
