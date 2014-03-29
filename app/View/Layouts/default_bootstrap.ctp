@@ -17,6 +17,7 @@
         echo $this->Html->script('jquery-1.11.0.min');
         echo $this->Html->script('jquery.history');
         echo $this->Html->script('bootstrap.min');
+        echo $this->Html->script('tinymce/tinymce.min');
 
 	?>
 </head>

@@ -1,7 +1,6 @@
 <?php
-class Announcement extends appModel{
+class Announcement extends AppModel{
+    
 	public $name="Announcement";
 	public $primaryKey = "id_announcement";
-
-	public $belongsTo = array("User");
 }
