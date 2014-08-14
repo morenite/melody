@@ -60,6 +60,10 @@ a.navbar-brand {
     padding: 15px;
 }
 
+.form-control {
+    border-radius: 0;
+}
+
 /* Main Styles */
 
 .songs h1 {

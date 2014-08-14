@@ -11,8 +11,12 @@
             <a class="navbar-brand" href="#">Melody</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        <?php
+            if (AuthComponent::user() != null):
+        ?>
+                
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo Router::url(array('controller' => 'users', 'action' => 'dashboard')) ?>"><span class="glyphicon glyphicon-home"></span> Dashboard</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-list"></span> My Activity</a></li>
@@ -24,7 +28,19 @@
             <ul class="nav navbar-nav pull-right">
                 <li><a href="<?php echo Router::url(array('controller' => 'administration')) ?>"><span class="glyphicon glyphicon-book"></span> Administration</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> username</a></li>
+            </ul>       
+        
+        <?php 
+            else: 
+        ?>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="<?php echo Router::url(array('controller' => 'users', 'action' => 'login')); ?>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        <?php
+            endif; 
+        ?>
+        
+        </div>
+        
     </div><!-- /.container-fluid -->
 </nav>

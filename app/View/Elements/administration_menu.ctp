@@ -64,7 +64,7 @@
         <div id="event" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class="administration-menu-items">
-                    <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Schedule New Event</a></li>
+                    <li><a class="ajax-button" href="<?php echo Router::url(array('controller' => 'events', 'action' => 'add')) ?>" target-element="div#content"><span class="glyphicon glyphicon-plus-sign"></span> Schedule New Event</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Event Data</a></li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@
         <div id="member" class="panel-collapse collapse">
             <div class="panel-body">
                 <ul class="administration-menu-items">
-                    <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Add New Member</a></li>
+                    <li><a class="ajax-button" href="<?php echo Router::url(array('controller' => 'users', 'action' => 'add')) ?>" target-element="div#content"><span class="glyphicon glyphicon-plus-sign"></span> Add New Member</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Member Data</a></li>
                 </ul>
             </div>

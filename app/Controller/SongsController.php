@@ -9,6 +9,11 @@ class SongsController extends AppController {
 		'limit' => 6
 	);
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('index', 'detail');
+    }
+
 	public function index() {
 		$this->set('title_for_layout', 'Song Index');
 
